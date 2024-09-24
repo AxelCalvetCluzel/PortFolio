@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    height: 300px;
+    /* Ajuste la hauteur selon tes besoins */
+    overflow: hidden;
+    /* Cache tout débordement */
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    /* Assure que l'image garde ses proportions */
+    position: absolute;
+    /* Positionne l'image en fond */
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    /* Couvre l'élément sans déformation */
+    z-index: -1;
+    /* Met l'image derrière le texte */
+}
+
+.header-text {
+    z-index: 1;
+    /* Assure que le texte soit au-dessus */
+    position: relative;
+    /* Pour que le z-index fonctionne */
+}
