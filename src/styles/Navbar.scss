@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8);
     padding: 1rem;
     display: flex;
     justify-content: space-around;
@@ -9,8 +9,38 @@
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
 
-    &:hover {
-        color: #00bcd4;
-    }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link.home:hover {
+    color: black;
+}
+
+.nav-link.about:hover {
+    color: #2965f1;
+}
+
+.nav-link.projects:hover {
+    color: #cc6699;
+}
+
+.nav-link.contact:hover {
+    color: #f0db4f;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
 }

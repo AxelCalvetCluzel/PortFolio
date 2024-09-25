@@ -1,0 +1,148 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.competences-container {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.competences-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.competence-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+
+    & p {
+        color: #333;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+}
+
+.competence-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.competence-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.competence-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.competence-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.competence-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.competence-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.competence-item:nth-child(7) {
+    animation-delay: 0.8s;
+}
+
+.competence-item:nth-child(8) {
+    animation-delay: 0.9s;
+}
+
+.competence-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #e6f7ff;
+}
+
+.icon {
+    margin-bottom: 0.5rem;
+    width: 50px;
+    height: 50px;
+}
+
+.html {
+    color: #e34c26;
+}
+
+.css {
+    color: #2965f1;
+}
+
+.sass {
+    color: #cc6699;
+}
+
+.react {
+    color: #61dbfb;
+}
+
+.javascript {
+    color: #f0db4f;
+}
+
+.github {
+    color: #24292e;
+}
+
+.figma {
+    color: #f24e1e;
+}
+
+.swagger {
+    color: #85ea2d;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .competences-grid {
+        gap: 1rem;
+    }
+
+    .competence-item {
+        padding: 0.5rem;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}

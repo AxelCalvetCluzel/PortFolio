@@ -1,34 +1,139 @@
 .header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    text-align: center;
-    padding: 2rem;
-    height: 300px;
-    /* Ajuste la hauteur selon tes besoins */
+    background: linear-gradient(to bottom, #000000, #2C3E50);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    color: white;
+    gap: 20px;
+}
+
+.header-description {
+    text-align: left;
+    animation: wave 3s ease-in-out infinite alternate;
+    background: linear-gradient(45deg, #ff0080, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+h1::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #2965f1;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header-description h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.header-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.profile-bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    max-height: 50vh;
+    max-width: 50vh;
     overflow: hidden;
-    /* Cache tout débordement */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
-.header-image {
+.profile-image {
     width: 100%;
-    height: auto;
-    /* Assure que l'image garde ses proportions */
-    position: absolute;
-    /* Positionne l'image en fond */
-    top: 0;
-    left: 0;
+    height: 100%;
     object-fit: cover;
-    /* Couvre l'élément sans déformation */
-    z-index: -1;
-    /* Met l'image derrière le texte */
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
 }
 
-.header-text {
-    z-index: 1;
-    /* Assure que le texte soit au-dessus */
-    position: relative;
-    /* Pour que le z-index fonctionne */
+.profile-bubble:hover .profile-image {
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-description h1 {
+        font-size: 2rem;
+    }
+
+    .header-description p {
+        font-size: 0.9rem;
+    }
+
+    .profile-bubble {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        width: 95%;
+        display: flex;
+        gap: 20px;
+    }
+
+    .header-description h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-description p {
+        font-size: 0.8rem;
+    }
+
+    .profile-bubble {
+        width: 40vw;
+    }
 }

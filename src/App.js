@@ -1,27 +1,35 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import React from "react";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Competences from "./pages/Competences";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import "./styles/Main.scss"; 
 
-const App = () =>  {
+const App = () => {
   return (
-    <Router>
+    <div>
       <Header />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div className="main-container">
+        <section id="about">
+          <About />
+        </section>{" "}
+        <section id="Competences">
+          <Competences />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </div>
       <Footer />
-    </Router>
+    </div>
   );
-}
+};
 
 export default App;

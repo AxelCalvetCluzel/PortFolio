@@ -1,0 +1,47 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Arial", sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#about {
+    background: linear-gradient(to bottom, #2c3e50, #4b7288);
+}
+
+#Competences {
+    background: linear-gradient(to bottom, #4b7288, #bac8d4);
+}
+
+#projects {
+    background: linear-gradient(to bottom, #bac8d4, #2c3e50);
+}
+
+#contact {
+    background: linear-gradient(to bottom, #2c3e50, #4b7288);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #00bcd4;
+}

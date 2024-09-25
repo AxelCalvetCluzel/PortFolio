@@ -1,17 +1,22 @@
-// src/components/Navbar.js
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Navbar.scss'; // Mise à jour du chemin
+import React from "react";
+import "../styles/Navbar.scss";
 
-const Navbar = () =>  {
+const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link className="nav-link" to="/">Accueil</Link>
-      <Link className="nav-link" to="/about">À propos</Link>
-      <Link className="nav-link" to="/projects">Projets</Link>
-      <Link className="nav-link" to="/contact">Contact</Link>
+      {" "}
+      <a className="nav-link" href="#about">
+        À propos
+      </a>
+      <a className="nav-link" href="#Competences">
+        Mes compétences
+      </a>
+      <a className="nav-link" href="#projects">
+        Projets
+      </a>
+      <a className="nav-link" href="#contact">Contact</a>
     </nav>
   );
-}
+};
 
 export default Navbar;

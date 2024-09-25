@@ -1,44 +1,37 @@
-// src/pages/Projects.js
 import React, { useState } from 'react';
 import '../styles/Projects.scss';
 import ProjectModal from '../components/ProjectModal';
 
-// Fake projects data
 const projectsData = [
   {
     title: "Projet 1",
-    description: "Description du projet 1. Ce projet concerne la création d'une application web.",
-    details: "Ce projet a été réalisé avec React, Node.js et MongoDB."
+    description: "Description du projet.",
+    details: "Ce projet a été réalisé avec ."
   },
   {
-    title: "Projet 2",
-    description: "Description du projet 2. Il s'agit d'une plateforme e-commerce.",
-    details: "Utilisation de technologies comme React, Express et Stripe."
-  },
-  {
-    title: "Projet 3",
-    description: "Description du projet 3. Ce projet concerne la création d'une API REST.",
-    details: "Implémentation avec Node.js, Express et PostgreSQL."
-  },
-  {
-    title: "Projet 4",
-    description: "Description du projet 3. Ce projet concerne la création d'une API REST.",
-    details: "Implémentation avec Node.js, Express et PostgreSQL."
-  },
-  {
-    title: "Projet 4",
-    description: "Description du projet 3. Ce projet concerne la création d'une API REST.",
-    details: "Implémentation avec Node.js, Express et PostgreSQL."
-  },
-  {
-    title: "Projet 4",
-    description: "Description du projet 3. Ce projet concerne la création d'une API REST.",
-    details: "Implémentation avec Node.js, Express et PostgreSQL."
-  },
-  {
-    title: "Projet 4",
-    description: "Description du projet 3. Ce projet concerne la création d'une API REST.",
-    details: "Implémentation avec Node.js, Express et PostgreSQL."
+    title: "Projet 1",
+    description: "Description du projet.",
+    details: "Ce projet a été réalisé avec ."
+  },{
+    title: "Projet 1",
+    description: "Description du projet.",
+    details: "Ce projet a été réalisé avec ."
+  },{
+    title: "Projet 1",
+    description: "Description du projet.",
+    details: "Ce projet a été réalisé avec ."
+  },{
+    title: "Projet 1",
+    description: "Description du projet.",
+    details: "Ce projet a été réalisé avec ."
+  },{
+    title: "Projet 1",
+    description: "Description du projet.",
+    details: "Ce projet a été réalisé avec ."
+  },{
+    title: "Projet 1",
+    description: "Description du projet.",
+    details: "Ce projet a été réalisé avec ."
   },
 ];
 
@@ -58,11 +51,11 @@ const Projects = () =>  {
 
   return (
     <div className="projects-container">
-      <h1>Mes Projets</h1>
+      <h2>Mes Projets</h2>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
           <div key={index} className="project-card" onClick={() => openModal(project)}>
-            <h2>{project.title}</h2>
+            <h3>{project.title}</h3>
             <p>{project.description}</p>
           </div>
         ))}

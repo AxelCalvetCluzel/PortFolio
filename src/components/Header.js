@@ -1,17 +1,30 @@
-// src/components/Header.js
-import React from 'react';
-import '../styles/Header.scss'; // Assure-toi d'avoir ce fichier de styles
-import montagne from '../images/montagne.jpg'; // Assure-toi d'avoir cette image
+import React from "react";
+import "../styles/Header.scss";
+import profile from "../images/profil.jpg";
 
 const Header = () => {
   return (
     <header className="header">
-      <img src={montagne} alt="Montagne" className="header-image" />
-      <div className="header-text">
-        <h1>Bienvenue sur mon Portfolio</h1>
+      <div className="header-content">
+        <div className="header-description">
+          <h1>Bienvenue sur mon Portfolio</h1>
+          <p>
+            Je suis <strong>Calvet-Cluzel Axel</strong>, Développeur front-end
+            passionné par la création d'interfaces utilisateur modernes et
+            intuitives. J'ai une expérience dans le développement avec React,
+            JavaScript, HTML, CSS, et SCSS.
+          </p>
+        </div>
+        <div className="profile-bubble">
+          <img
+            src={profile}
+            alt="Profil de Calvet-Cluzel Axel"
+            className="profile-image"
+          />
+        </div>
       </div>
     </header>
   );
-}
+};
 
 export default Header;

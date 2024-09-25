@@ -1,4 +1,124 @@
 .about-container {
-    padding: 2rem;
-    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+    background: linear-gradient(to bottom, #2C3E50, #4B7288);
+}
+
+h1::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #2965f1;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+.about-content {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.scrollable-text {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.about-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 150px;
+}
+
+.about-image {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cv-link {
+    background-color: #2965f1;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cv-link:hover {
+    background-color: #224a8b;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.about-container:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 3rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .about-extra {
+        margin-top: 2rem;
+    }
 }
