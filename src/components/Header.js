@@ -23,6 +23,7 @@ const Header = () => {
           />
         </div>
       </div>
+      <div className="light"></div>
     </header>
   );
 };

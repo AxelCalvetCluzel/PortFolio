@@ -1,7 +1,59 @@
 .footer {
-    background-color: #333;
+    background: linear-gradient(135deg, #2c3e50, #4b7288);
     color: white;
-    padding: 1rem;
+    padding: 2rem 0;
     text-align: center;
     margin-top: auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -10px 30px rgba(0, 212, 255, 0.3);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), transparent);
+    transform: translateX(-50%);
+    animation: shimmer 2s infinite;
+}
+
+.footer h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+}
+
+.footer a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-30px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
 }

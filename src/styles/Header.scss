@@ -81,8 +81,13 @@ h1::after {
     max-height: 50vh;
     max-width: 50vh;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4), 0 4px 40px rgba(0, 212, 255, 0.2);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.profile-bubble:hover {
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.8), 0 8px 60px rgba(0, 212, 255, 0.4);
+    transform: scale(1.05);
 }
 
 .profile-image {
@@ -91,12 +96,14 @@ h1::after {
     object-fit: cover;
     border-radius: 50%;
     filter: grayscale(100%);
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.4s ease;
 }
 
 .profile-bubble:hover .profile-image {
     filter: grayscale(0%);
+    transform: scale(1.1);
 }
+
 
 @media (max-width: 768px) {
     .header-content {

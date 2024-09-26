@@ -26,22 +26,3 @@ body {
 #contact {
     background: linear-gradient(to bottom, #2c3e50, #4b7288);
 }
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px 0;
-    z-index: 1000;
-}
-
-.nav-link {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: #00bcd4;
-}

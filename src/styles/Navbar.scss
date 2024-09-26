@@ -1,46 +1,74 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
     background-color: rgba(51, 51, 51, 0.8);
-    padding: 1rem;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4), 0 0 30px rgba(0, 212, 255, 0.2);
+    z-index: 1000;
 }
 
 .nav-link {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
     position: relative;
-    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: color 0.3s ease;
+    width: auto;
 }
 
-.nav-link::after {
+.nav-link i {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    color: #00d4ff;
+}
+
+.navbar::before {
     content: '';
     position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-.nav-link.home:hover {
-    color: black;
-}
-
-.nav-link.about:hover {
-    color: #2965f1;
-}
-
-.nav-link.projects:hover {
-    color: #cc6699;
-}
-
-.nav-link.contact:hover {
-    color: #f0db4f;
-}
-
-.nav-link:hover::after {
-    width: 100%;
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.2), transparent);
+    pointer-events: none;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+    }
+
+    .nav-link i {
+        font-size: 1.2rem;
+    }
 }

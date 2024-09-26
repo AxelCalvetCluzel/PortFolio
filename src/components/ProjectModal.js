@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Modal from 'react-modal';
 
@@ -11,7 +12,7 @@ const ProjectModal = ({ isOpen, onRequestClose, project }) => {
       overlayClassName="project-modal-overlay"
     >
       {project && (
-        <div>
+        <div className='modalContent'>
           <h3>{project.title}</h3>
           <p>{project.details}</p>
           <button onClick={onRequestClose} className="close-modal-btn">Fermer</button>

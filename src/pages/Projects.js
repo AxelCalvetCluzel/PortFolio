@@ -1,41 +1,10 @@
+
 import React, { useState } from 'react';
 import '../styles/Projects.scss';
 import ProjectModal from '../components/ProjectModal';
+import projectsData from '../data/ProjectsData';
 
-const projectsData = [
-  {
-    title: "Projet 1",
-    description: "Description du projet.",
-    details: "Ce projet a été réalisé avec ."
-  },
-  {
-    title: "Projet 1",
-    description: "Description du projet.",
-    details: "Ce projet a été réalisé avec ."
-  },{
-    title: "Projet 1",
-    description: "Description du projet.",
-    details: "Ce projet a été réalisé avec ."
-  },{
-    title: "Projet 1",
-    description: "Description du projet.",
-    details: "Ce projet a été réalisé avec ."
-  },{
-    title: "Projet 1",
-    description: "Description du projet.",
-    details: "Ce projet a été réalisé avec ."
-  },{
-    title: "Projet 1",
-    description: "Description du projet.",
-    details: "Ce projet a été réalisé avec ."
-  },{
-    title: "Projet 1",
-    description: "Description du projet.",
-    details: "Ce projet a été réalisé avec ."
-  },
-];
-
-const Projects = () =>  {
+const Projects = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -55,12 +24,14 @@ const Projects = () =>  {
       <div className="projects-grid">
         {projectsData.map((project, index) => (
           <div key={index} className="project-card" onClick={() => openModal(project)}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <img src={project.image} alt={project.title} className="project-image" />
+            <div className="project-content">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
           </div>
         ))}
       </div>
-
       <ProjectModal 
         isOpen={modalIsOpen} 
         onRequestClose={closeModal} 
@@ -68,6 +39,6 @@ const Projects = () =>  {
       />
     </div>
   );
-}
+};
 
 export default Projects;
