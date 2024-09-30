@@ -15,7 +15,11 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+        const emailAddress = "acalvet18@gmail.com";
+        const subject = "Nouveau message de contact";
+        const body = `Nom: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+        const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
         setFormData({ name: '', email: '', message: '' });
     };
 

@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import "./styles/Main.scss"; 
+import Robot from "./components/Robot";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         </section>
       </div>
       <Footer />
+      <Robot />
     </div>
   );
 };

@@ -1,4 +1,3 @@
-
 import React from "react";
 import "../styles/Footer.scss";
 
@@ -6,13 +5,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>
-        &copy; {new Date().getFullYear()} Calvet-Cluzel Axel. Tous droits
-        réservés.
+        &copy; {new Date().getFullYear()} Calvet-Cluzel Axel. Tous droits réservés.
       </p>
       <p>
         Suivez-moi sur
         <a
-          href="https://www.linkedin.com/in/yourprofile"
+          href="https://www.linkedin.com/in/votreprofil" 
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -21,7 +19,7 @@ const Footer = () => {
         </a>{" "}
         |
         <a
-          href="https://github.com/yourprofile"
+          href="https://github.com/AxelCalvetCluzel?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
         >
